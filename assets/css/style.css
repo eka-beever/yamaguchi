@@ -128,12 +128,15 @@ body {
   -ms-flex-align: center;
   -ms-flex-pack: center;
   -webkit-box-align: center;
-  /* align-items: center; */
+  
   -webkit-box-pack: center;
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #ffffff;
+}
+body.login-wrap {
+align-items: center;
 }
 ul {
   display: block;
@@ -146,6 +149,9 @@ ul {
 }
 .pt-30 {
   padding-top:30px;
+}
+.mb-40 {
+  margin-bottom: 40px;
 }
 .btn-tosca {
     background-color:#299AB0;
@@ -186,7 +192,9 @@ ul {
 }
 
 .form-signin {
-    padding:140px 20px
+    padding:140px 20px;
+    margin: auto;
+    text-align: center;
 }
 .input-container {
     display: flex;
@@ -199,6 +207,7 @@ color: grey;
 text-align: center;
 position: absolute;
 font-size: 22px;
+left: 0;
 }
 .input-field {
 padding: 10px 10px 10px 40px;
@@ -274,7 +283,7 @@ body .navbar-nav ul li.active a, body .navbar-nav ul li.active a .icon {
   border-radius:5px;
   min-height: 320px;
 }
-.panel-wrap .title, .title{
+.panel-wrap .title, .title-content{
   text-align:left;
   color:#299AB0;
   font-weight:bold;;
@@ -382,4 +391,41 @@ ol.breadcrumb li.active {
 .breadcrumb li .icon:before {
   top: 4px;
   position: relative;
+}
+.latest {
+  margin-top:20px;
+}
+.latest ul li {
+  float:left;
+  display:inline-flex;
+  border-top:1px solid #eed;
+  padding:10px 20px;
+}
+.latest ul {
+  list-style:none;
+  display:inline-block;
+  float: left;
+}
+.latest ul li div {
+  padding-right:40px;
+}
+body.login-wrap .form-control {
+  border:1px solid #ddd !important;
+  background-color:transparent !important;
+  padding:15px 0px 15px 40px;
+  height: 48px;
+}
+body.login-wrap .input-group {
+  margin-bottom:20px !important;
+  width:100%;
+}
+.form-signin a {
+  text-align:center;
+  padding:20px 0px;
+  position: relative;
+    top: 16px;
+}
+.img-login {
+  margin:auto;
+  text-align:center;;
 }
