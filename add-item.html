@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <title>やまぐちヘルスラボ | 会員データ</title>
+
+    <!-- <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- don't copy or edit, this library generate from voyager -->
+    <link rel="stylesheet" href="assets/lib/voyager/app.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  </head>
+
+  <body class="yamaguchi">
+
+    <div id="voyager-loader">
+        <img src="http://127.0.0.1:8000/admin/voyager-assets?path=images%2Flogo-icon.png" alt="Voyager Loader">
+    </div>
+    <div class="app-container">
+        <div class="fadetoblack visible-xs"></div>
+        <div class="row content-container">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="hamburger btn-link">
+                            <span class="hamburger-inner"></span>
+                        </button>
+                        <ol class="breadcrumb hidden-xs">
+                            <li class="active"><span class="icon icon-add"></span>会員データ</li>
+                        </ol>
+                    </div>
+                    <ul class="nav navbar-nav  navbar-right ">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle text-right" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <div class="title-profile">こんにちは, お帰りなさい,<span> Catherine</span></div>
+                                <img src="dummy-assets/avatar.png" class="profile-img"> 
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-animated">
+                                <li class="profile-img">
+                                    <img src="http://localhost/storage/users/default.png" class="profile-img">
+                                    <div class="profile-body">
+                                        <h5>Admin</h5>
+                                        <h6>admin@admin.com</h6>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="class-full-of-rum">
+                                    <a href="#" >
+                                        <i class="voyager-person"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="/" target="_blank">
+                                        <i class="voyager-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li >
+                                    <form action="index.html">
+                                        <input type="hidden" >
+                                        <button type="submit" class="btn btn-danger btn-block">
+                                            <i class="voyager-power"></i>
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header navbar-header-tosca">
+                            <a class="navbar-brand " href="#">
+                                <div class="logo-icon-container">
+                                    <div class="icon-logo"></div>
+                                </div>
+                                <div class="title">
+                                    <p>やまぐちヘルスラボ</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="adminmenu">
+                        <div class="nav navbar-nav">
+                            <ul>
+                                <li >
+                                    <a href="dashboard.html">
+                                    <span class="icon icon-home"></span> 
+                                    <span class="title">ダッシュボード</span>
+                                    </a> 
+                                </li>
+                                <li class="active">
+                                    <a href="add-item.html">
+                                    <span class="icon icon-add"></span> 
+                                    <span class="title">項目追加</span>
+                                    </a> 
+                                </li>
+                                <li class="dropdown ">
+                                    <a target="_self" href="member.html"  class="">
+                                    <!-- <a target="_self" href="#5-dropdown-element member.html" data-toggle="collapse" aria-expanded="true" class=""> -->
+                                        <span class="icon icon-member"></span> 
+                                        <span class="title">会員データ</span>
+                                    </a> 
+                                    <div id="5-dropdown-element" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body ">
+                                            <ul class="nav navbar-nav">
+                                                <li class="">
+                                                    <a target="_self" href="upload.html">
+                                                        <span class="icon icon-upload"></span> 
+                                                        <span class="title">アップロード</span>
+                                                    </a> 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li> 
+                                <li>
+                                    <a href="screening.html">
+                                    <span class="icon icon-screening"></span> 
+                                    <span class="title">スクリーニング</span>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="role.html">
+                                    <span class="icon icon-role"></span> 
+                                    <span class="title">運営者管理画面</span>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="setting.html">
+                                    <span class="icon icon-setting"></span> 
+                                    <span class="title">設定</span>
+                                    </a> 
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="side-body padding-top">
+                   
+                        <div class="page-content">
+                            <div class="title-page">項目追加</div>
+                            <div class="clearfix container-fluid row">
+                                <div class='col-lg-12  no-padding'>
+                                    <div class="panel widget center bgimage panel-custom">
+                                        <div class="panel-content"> 
+                                           
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        
+                        </div>
+                        <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+             </div>
+        </div>
+    </div>
+
+    <!-- don't copy or edit, this library generate from voyager -->
+    <script type="text/javascript" src="http://127.0.0.1:8000/admin/voyager-assets?path=js%2Fapp.js"></script>
+  </body>
+</html>

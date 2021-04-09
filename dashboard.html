@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <title>やまぐちヘルスラボ | ダッシュボード</title>
+
+    <!-- <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- don't copy or edit, this library generate from voyager -->
+    <link rel="stylesheet" href="assets/lib/voyager/app.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  </head>
+
+  <body class="yamaguchi">
+
+    <div id="voyager-loader">
+        <img src="http://127.0.0.1:8000/admin/voyager-assets?path=images%2Flogo-icon.png" alt="Voyager Loader">
+    </div>
+    <div class="app-container">
+        <div class="fadetoblack visible-xs"></div>
+        <div class="row content-container">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="hamburger btn-link">
+                            <span class="hamburger-inner"></span>
+                        </button>
+                        <ol class="breadcrumb hidden-xs">
+                            <li class="active"><span class="icon icon-home"></span>ダッシュボード</li>
+                        </ol>
+                    </div>
+                    <ul class="nav navbar-nav  navbar-right ">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle text-right" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <div class="title-profile">こんにちは, お帰りなさい,<span> Catherine</span></div>
+                                <img src="dummy-assets/avatar.png" class="profile-img"> 
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-animated">
+                                <li class="profile-img">
+                                    <img src="http://localhost/storage/users/default.png" class="profile-img">
+                                    <div class="profile-body">
+                                        <h5>Admin</h5>
+                                        <h6>admin@admin.com</h6>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="class-full-of-rum">
+                                    <a href="#" >
+                                        <i class="voyager-person"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="/" target="_blank">
+                                        <i class="voyager-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li >
+                                    <form action="index.html">
+                                        <input type="hidden" >
+                                        <button type="submit" class="btn btn-danger btn-block">
+                                            <i class="voyager-power"></i>
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header navbar-header-tosca">
+                            <a class="navbar-brand " href="#">
+                                <div class="logo-icon-container">
+                                    <div class="icon-logo"></div>
+                                </div>
+                                <div class="title">
+                                    <p>やまぐちヘルスラボ</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="adminmenu">
+                        <div class="nav navbar-nav">
+                            <ul>
+                                <li class="active">
+                                    <a href="dashboard.html">
+                                    <span class="icon icon-home"></span> 
+                                    <span class="title">ダッシュボード</span>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="add-item.html">
+                                    <span class="icon icon-add"></span> 
+                                    <span class="title">項目追加</span>
+                                    </a> 
+                                </li>
+                                <li class="dropdown">
+                                    <a target="_self" href="member.html" aria-expanded="true" class="">
+                                        <!-- <a target="_self" href="#5-dropdown-element" data-toggle="collapse" aria-expanded="true" class=""> -->
+                                        <span class="icon icon-member"></span> 
+                                        <span class="title">会員データ</span>
+                                    </a> 
+                                    <div id="5-dropdown-element" class="panel-collapse collapse in" aria-expanded="true" style="">
+                                        <div class="panel-body ">
+                                            <ul class="nav navbar-nav">
+                                                <li class="">
+                                                    <a target="_self" href="upload.html">
+                                                        <span class="icon icon-upload"></span> 
+                                                        <span class="title">アップロード</span>
+                                                    </a> 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li> 
+                                <li>
+                                    <a href="screening.html">
+                                    <span class="icon icon-screening"></span> 
+                                    <span class="title">スクリーニング</span>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="role.html">
+                                    <span class="icon icon-role"></span> 
+                                    <span class="title">運営者管理画面</span>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="setting.html">
+                                    <span class="icon icon-setting"></span> 
+                                    <span class="title">設定</span>
+                                    </a> 
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="side-body padding-top">
+                   
+                        <div class="page-content">
+                            <div class="title-page">ダッシュボード</div>
+                            <div class="clearfix container-fluid row">
+                                <div class='col-lg-12  no-padding'>
+                                    <div class="panel widget center bgimage panel-custom">
+                                        <div class="panel-content"> 
+                                            <div class='col-xs-12 col-md-4'>
+                                                <div class="panel-wrap">
+                                                    <div class="title">会員登録者数</div>
+                                                    <div class=" content-wrap">
+                                                        <div class="member">
+                                                            <div class="total-member-wrap">
+                                                                    562<span>人</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='col-xs-12 col-md-4'>
+                                                <div class="panel-wrap">
+                                                    <div class="title">男女比</div>
+                                                    <div class="content-wrap">
+                                                        <div class="donutcharts">
+                                                            <div class="icon-gender">
+                                                                <img src="assets/img/img_gender.png">
+                                                            </div>
+                                                            <canvas id="genderchart" height="200"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='col-xs-12 col-md-4'>
+                                                <div class="panel-wrap">
+                                                    <div class="title">会員登録者数</div>
+                                                    <div class="content-wrap">
+                                                        <canvas id="barchart" ></canvas>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 pt-30">
+                                                <div class="title">イベントスケジュール</div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-container">
+                                <div class="background-white">
+                                    <p >
+                                        To view analytics you'll need to get a google analytics client id and add it to your settings for the key <code>google_analytics_client_id</code>. Get your key in your Google developer console:
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        
+                        </div>
+                        <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+             </div>
+        </div>
+    </div>
+
+    <!-- don't copy or edit, this library generate from voyager -->
+    <script type="text/javascript" src="http://127.0.0.1:8000/admin/voyager-assets?path=js%2Fapp.js"></script>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js'></script>
+    <!-- <script src="assets/js/scripts.js"></script> -->
+   <script>
+       Chart.defaults.doughnutLabels = Chart.helpers.clone(Chart.defaults.doughnut);
+
+var helpers = Chart.helpers;
+var defaults = Chart.defaults;
+
+Chart.controllers.doughnutLabels = Chart.controllers.doughnut.extend({
+	updateElement: function(arc, index, reset) {
+    var _this = this;
+    var chart = _this.chart,
+        chartArea = chart.chartArea,
+        opts = chart.options,
+        animationOpts = opts.animation,
+        arcOpts = opts.elements.arc,
+        centerX = (chartArea.left + chartArea.right) / 2,
+        centerY = (chartArea.top + chartArea.bottom) / 2,
+        startAngle = opts.rotation, // non reset case handled later
+        endAngle = opts.rotation, // non reset case handled later
+        dataset = _this.getDataset(),
+        circumference = reset && animationOpts.animateRotate ? 0 : arc.hidden ? 0 : _this.calculateCircumference(dataset.data[index]) * (opts.circumference / (2.0 * Math.PI)),
+        innerRadius = reset && animationOpts.animateScale ? 0 : _this.innerRadius,
+        outerRadius = reset && animationOpts.animateScale ? 0 : _this.outerRadius,
+        custom = arc.custom || {},
+        valueAtIndexOrDefault = helpers.getValueAtIndexOrDefault;
+
+    helpers.extend(arc, {
+      // Utility
+      _datasetIndex: _this.index,
+      _index: index,
+
+      // Desired view properties
+      _model: {
+        x: centerX + chart.offsetX,
+        y: centerY + chart.offsetY,
+        startAngle: startAngle,
+        endAngle: endAngle,
+        circumference: circumference,
+        outerRadius: outerRadius,
+        innerRadius: innerRadius,
+        label: valueAtIndexOrDefault(dataset.label, index, chart.data.labels[index])
+      },
+
+      draw: function () {
+      	var ctx = this._chart.ctx,
+						vm = this._view,
+						sA = vm.startAngle,
+						eA = vm.endAngle,
+						opts = this._chart.config.options;
+				
+					var labelPos = this.tooltipPosition();
+					var segmentLabel = vm.circumference / opts.circumference * 100;
+					
+					ctx.beginPath();
+					
+					ctx.arc(vm.x, vm.y, vm.outerRadius, sA, eA);
+					ctx.arc(vm.x, vm.y, vm.innerRadius, eA, sA, true);
+					
+					ctx.closePath();
+					ctx.strokeStyle = vm.borderColor;
+					ctx.lineWidth = vm.borderWidth;
+					
+					ctx.fillStyle = vm.backgroundColor;
+					
+					ctx.fill();
+					ctx.lineJoin = 'bevel';
+					
+					if (vm.borderWidth) {
+						ctx.stroke();
+					}
+					
+					if (vm.circumference > 0.15) {
+						ctx.beginPath();
+						ctx.font = helpers.fontString(opts.defaultFontSize, opts.defaultFontStyle, opts.defaultFontFamily);
+						ctx.fillStyle = "#fff";
+						ctx.textBaseline = "top";
+						ctx.textAlign = "center";
+						ctx.fillText(segmentLabel.toFixed(0) + "%", labelPos.x, labelPos.y);
+					}
+      }
+    });
+
+        var model = arc._model;
+        model.backgroundColor = custom.backgroundColor ? custom.backgroundColor : valueAtIndexOrDefault(dataset.backgroundColor, index, arcOpts.backgroundColor);
+        model.hoverBackgroundColor = custom.hoverBackgroundColor ? custom.hoverBackgroundColor : valueAtIndexOrDefault(dataset.hoverBackgroundColor, index, arcOpts.hoverBackgroundColor);
+        model.borderWidth = custom.borderWidth ? custom.borderWidth : valueAtIndexOrDefault(dataset.borderWidth, index, arcOpts.borderWidth);
+        model.borderColor = custom.borderColor ? custom.borderColor : valueAtIndexOrDefault(dataset.borderColor, index, arcOpts.borderColor);
+
+        // Set correct angles if not resetting
+        if (!reset || !animationOpts.animateRotate) {
+        if (index === 0) {
+            model.startAngle = opts.rotation;
+        } else {
+            model.startAngle = _this.getMeta().data[index - 1]._model.endAngle;
+        }
+
+        model.endAngle = model.startAngle + model.circumference;
+        }
+
+        arc.pivot();
+    }
+    });
+
+    var config = {
+    type: 'doughnutLabels',
+    data: {
+        datasets: [{
+        data: [
+            1200,
+            1112,
+        ],
+        backgroundColor: [
+            "#F79655",
+            "#299AB0",
+        ],
+        label: 'Dataset 1'
+        }],
+        labels: [
+        "Women",
+        "Men",
+        ]
+    },
+    options: {
+        aspectRatio:false,
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+            }
+        },
+        responsive:true,
+        cutoutPercentage: 60,
+        legend: {
+            display: false,
+        position: 'top',
+        },
+        animation: {
+        animateScale: true,
+        animateRotate: true
+        }
+    }
+    };
+
+    var ctx = document.getElementById("genderchart").getContext("2d");
+    new Chart(ctx, config);
+   </script>
+   <script>
+           var barChartData1 = {
+        labels: ["Technology", "Customer Services", "Health Care", "Capital Goods", "Finance", "Basic Industries", "Consumer Non Durables", "Energy", "Publi Utilities","Transportation","n/a"],
+        datasets: [
+            {
+                label: "One",
+                backgroundColor: ["#775645", "#77DAE8", "#CDDB39", "#9D46B1", "#4CAF50", "#F34238", "#2196F3","#15968A", "#FD9626", "#414FB1", "#9F9F9F"],
+                data: [95, 90, 85, 80, 70,60,50,40,30,20,10]
+            }
+        ]
+    };
+
+    var barChartOptions = {
+        tooltips: {
+            mode: 'nearest', //<- set this
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    // console.log(tooltipItem);
+                    if (data.datasets[tooltipItem.datasetIndex].label === 'none')
+                        return false;
+                    else
+                        return data.datasets[tooltipItem.datasetIndex].label + ': ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString();
+                }
+            }
+        },
+
+
+        elements: {
+            rectangle: {
+                borderWidth: 0
+            }
+        },
+
+        maintainAspectRatio: false,
+        responsive: true,
+        legend: {
+            //position: 'top',
+            display: false,
+            labels: {
+                filter: function(item, chart) {
+                    // Logic to remove a particular legend item goes here
+                    //return !item.text.includes('none');
+                    return !item.text.indexOf('none');
+                }
+            }
+        },
+
+
+        title: {
+            display: false,
+            text: 'Chart.js Horizontal Bar Chart'
+        },
+
+        scales: {
+            xAxes: [{
+                stacked: true,
+                barPercentage: 0,
+             //   type: 'logarithmic',
+                // position: 'bottom',
+                ticks: {
+                    min: 0,
+                    max: 100,
+
+                    //autoSkip: true,
+                    //stepSize: 2,
+                    userCallback: function(tick) {
+                        //  console.log(tick);
+                        if (Number.isInteger(tick))
+                            return tick;
+                        else
+                            return Number(tick).toFixed(1);
+                    }
+                },
+                scaleLabel: {
+                    display: false,
+                    labelString: 'Wavelength (microns)'
+                }
+                //type: 'logarithmic'
+            }],
+
+
+            yAxes: [{
+                
+                stacked: true,
+                //type: 'logarithmic',
+                barPercentage: 0.2,
+                afterFit: function(scaleInstance) {
+                    scaleInstance.width = 180; // sets the width to 100px
+                },
+
+                ticks: {
+                    // display: false
+                }
+            }]
+        },
+        pan: {
+            enabled: true,
+            mode: "x",
+            speed: 10,
+            threshold: 10
+        },
+
+
+        // Container for zoom options
+        zoom: {
+            // Boolean to enable zooming
+            enabled: true,
+
+            // Zooming directions. Remove the appropriate direction to disable 
+            // Eg. 'y' would only allow zooming in the y direction
+            mode: 'x'
+        }
+    };
+var configBarChart = {
+  type: 'horizontalBar',
+  data: barChartData1,
+  options:barChartOptions/*{
+   // maintainAspectRatio: false,
+    tooltips: {
+      mode: 'label'
+
+    },
+    scales: {
+      xAxes: [{
+        stacked: true,
+         type: 'logarithmic',
+                 position: 'bottom',
+           
+      }],
+      yAxes: [{
+        stacked: true
+      }]
+    },
+    legend: {
+      display: false
+    }
+  }*/
+};
+
+var ctxBarChart = document.getElementById("barchart").getContext("2d");
+new Chart(ctxBarChart, configBarChart);
+
+   </script>
+  </body>
+</html>

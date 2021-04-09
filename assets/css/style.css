@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'YuGothic';
+    src: url('../fonts/YuGothic-Medium.eot');
+    src: url('../fonts/YuGothic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuGothic-Medium.woff2') format('woff2'),
+        url('../fonts/YuGothic-Medium.woff') format('woff'),
+        url('../fonts/YuGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('../fonts/YuGothic-Bold.eot');
+    src: url('../fonts/YuGothic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YuGothic-Bold.woff2') format('woff2'),
+        url('../fonts/YuGothic-Bold.woff') format('woff'),
+        url('../fonts/YuGothic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'yamaguchi';
+    src:  url('../fonts/ico-yamaguchi/ico-yamaguchi.eot');
+    src:  url('../fonts/ico-yamaguchi/ico-yamaguchi.eot#iefix') format('embedded-opentype'),
+      url('../fonts/ico-yamaguchi/ico-yamaguchi.ttf') format('truetype'),
+      url('../fonts/ico-yamaguchi/ico-yamaguchi.woff') format('woff'),
+      url('../fonts/ico-yamaguchi/ico-yamaguchi.svg#ico-yamaguchi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'yamaguchi' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-add:before {
+    content: "\e900";
+  }
+  .icon-search:before {
+    content: "\e901";
+  }
+  .icon-close:before {
+    content: "\e902";
+  }
+  .icon-download:before {
+    content: "\e903";
+  }
+  .icon-edit:before {
+    content: "\e904";
+  }
+  .icon-edit2:before {
+    content: "\e905";
+  }
+  .icon-home:before {
+    content: "\e906";
+  }
+  .icon-logo:before {
+    content: "\e907";
+  }
+  .icon-member:before {
+    content: "\e908";
+  }
+  .icon-menu:before {
+    content: "\e909";
+  }
+  .icon-minus:before {
+    content: "\e90a";
+  }
+  .icon-next:before {
+    content: "\e90b";
+  }
+  .icon-password:before {
+    content: "\e90c";
+  }
+  .icon-plus:before {
+    content: "\e90d";
+  }
+  .icon-prev:before {
+    content: "\e90e";
+  }
+  .icon-role:before {
+    content: "\e90f";
+  }
+  .icon-screening:before {
+    content: "\e910";
+  }
+  .icon-setting:before {
+    content: "\e911";
+  }
+  .icon-trash:before {
+    content: "\e912";
+  }
+  .icon-upload:before {
+    content: "\e913";
+  }
+  .icon-user:before {
+    content: "\e914";
+  }
+  .icon-view:before {
+    content: "\e915";
+  }
+
+html,
+body {
+  height: 100%;
+  font-family: 'YuGothic', sans-serif !important;
+}
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  /* align-items: center; */
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+.pt-30 {
+  padding-top:30px;
+}
+.btn-tosca {
+    background-color:#299AB0;
+    color:#fff
+}
+.btn-md {
+    padding:10px 0px 
+}
+.color-tosca {
+    color:#299AB0;
+}
+/* Layout */
+.background-white {
+  background:#fff;
+}
+.clearfix {
+  clear:both
+}
+.bg-top {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/img_bg_login_top.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.bg-bottom{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/img_bg_login_bottom.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-signin {
+    padding:140px 20px
+}
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+.icon-field {
+padding: 12px;
+color: grey;
+text-align: center;
+position: absolute;
+font-size: 22px;
+}
+.input-field {
+padding: 10px 10px 10px 40px;
+
+}
+  
+body .side-menu .navbar-header-tosca  {
+  background-color:#299AB0 !important;
+}
+body .side-menu .navbar-header-tosca  a, body .side-menu .navbar-header-tosca  a:hover {
+  color:#fff;
+}
+
+body .content-container .side-menu {
+  background: #0C333B;
+}
+.navbar-default {
+  background-color:transparent !important;
+}
+nav .navbar-nav {
+  width:100%
+}
+body .content-container .side-menu .navbar-nav li{
+  padding: 10px 0px 0px;
+}
+body .content-container .side-menu .navbar-nav li .active {
+  background:#F79655 !important;
+  color:#fff
+}
+body .content-container .side-menu .navbar-nav li .active a{
+  background-color:#F79655 !important;
+  color:#fff
+}
+.app-container .content-container .navbar-top {
+  background:#fff !important;
+}
+nav .navbar-nav ul li.active{
+  background-color:#F79655 !important;
+} 
+body .navbar-nav ul li.active a, body .navbar-nav ul li.active a .icon {
+  color:#fff !important;
+}
+.app-container .content-container .side-menu {
+  float:left;
+  left:0;
+  bottom:0 !important;
+}
+.app-container {
+  width:100%
+}
+.app-container.expanded .content-container .side-menu .navbar-nav li.dropdown>a:after {
+
+}
+.navbar-nav ul li a {
+  color:#299AB0!important;
+  font-family: 'YuGothic', sans-serif !important;
+}
+
+.navbar-nav ul li a .icon{
+  font-size: 25px !important;
+  color:#299AB0!important;
+}
+.panel-collapse .panel-body  {
+  background:#052B32;
+  padding:0px
+}
+.widget-container {
+  padding: 15px 25px 25px;
+}
+.panel-wrap {
+  border: 1px solid #eee;
+  padding:20px;
+  border-radius:5px;
+  min-height: 320px;
+}
+.panel-wrap .title, .title{
+  text-align:left;
+  color:#299AB0;
+  font-weight:bold;;
+}
+
+.panel-custom {
+  padding:20px 10px !important;
+  margin: 10px 20px !important;
+}
+.title-page {
+  font-weight: bold;
+  color: #0C333B;
+  padding: 18px 11px 10px 11px;
+  font-size: 22px;
+}
+.member {
+  width: 180px;
+  height: 180px;
+  border: 9px solid #CCEFF5;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+.total-member-wrap {
+  font-size: 60px;
+  position: relative;
+  padding: 35px 0px;
+  color:#299AB0;
+}
+.total-member-wrap span {
+  font-size:20px;
+}
+.navbar-nav.navbar-right li.dropdown.open .dropdown-menu {
+  display: block;
+  position: absolute !important;
+}
+.logo-icon-container .icon-logo {
+  font-size:25px;
+  padding: 18px 0px;
+}
+.title-profile {
+  float:left !important;
+  padding-right:8px;
+}
+.title-profile span {
+  color:#299AB0 !important;
+  padding-right:10px;
+  font-weight:bold;;
+}
+.navbar-right {
+  position: absolute !important;
+  right: 20px !important;
+
+}
+.icon-gender {
+  position: absolute;
+  left: 0;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  margin: auto;
+}
+.chart {
+  position: relative;
+}
+#myChart {
+  margin:auto
+}
+ol.breadcrumb {
+  border:none;
+}
+ol.breadcrumb li {
+  font-size:18px;
+}
+ol.breadcrumb li.active {
+  color:#299AB0;
+
+}
+.content-wrap {
+  height:300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.content-wrap {
+  margin:auto;
+}
+#genderchart {
+  width:200px;
+  height:200px;
+  margin:30px auto;
+}
+.donutcharts {
+  position: relative;
+}
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+  background: #299AB0 !important;
+}
+.breadcrumb li .icon:before {
+
+}
+.breadcrumb li span.icon {
+  font-size:24px;
+}
+.breadcrumb li .icon:before {
+  top: 4px;
+  position: relative;
+}
