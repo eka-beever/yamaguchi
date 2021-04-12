@@ -12,15 +12,23 @@
     <!-- <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <link href=" https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css" rel="stylesheet">
+   
+
     <!-- don't copy or edit, this library generate from voyager -->
     <link rel="stylesheet" href="assets/lib/voyager/app.css">
+    <link href="assets/lib/voyager/voyager.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   </head>
 
   <body class="yamaguchi">
-
-    <div id="voyager-loader">
-        <img src="http://127.0.0.1:8000/admin/voyager-assets?path=images%2Flogo-icon.png" alt="Voyager Loader">
+    <div class="preloader">
+        <div id="voyager-loader">
+            <img src="assets/img/preloader.gif" alt="Voyager Loader">
+            <div class="logo-preloader">
+                <img src="assets/img/logo-color.png">
+            </div>
+        </div>
     </div>
     <div class="app-container">
         <div class="fadetoblack visible-xs"></div>
@@ -139,9 +147,536 @@
                             <div class="title-page">スクリーニング</div>
                             <div class="clearfix container-fluid row">
                                 <div class='col-lg-12  no-padding'>
-                                    <div class="panel widget center bgimage panel-custom">
+                                    <div class="panel widget  bgimage panel-custom">
                                         <div class="panel-content"> 
-                                           
+                                            <div class="table-responsive">
+                                                <table id="role" class="display nowrap" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>運営者名</th>
+                                                            <th>メールアドレス</th>
+                                                            <th>権限グループ</th>
+                                                            <th >アクション</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td>
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>鈴木一郎</td>
+                                                            <td>xxx@gmail.com</td>
+                                                            <td>管理者</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-trash"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -156,8 +691,94 @@
              </div>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="addrole" tabindex="-1" role="dialog" >
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title color-tosca" id="myModalLabel"><center>アイテム追加</center></h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-horizontal">
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">アップロード</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">メールアドレス</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">権限グループ</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer no-padding">
+                        <div class="container no-padding">
+                            <div class="col-lg-6 no-padding-left">
+                                <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="col-lg-6 no-padding-right">
+                                <button type="button" class="btn btn-tosca btn-block">Submit</button>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+                 </form>
+            </div>
+            
+        </div>
+        </div>
+    </div>
     <!-- don't copy or edit, this library generate from voyager -->
     <script type="text/javascript" src="assets//lib/voyager/app.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+    
+    <!-- DataTables -->
+        <script>
+           $(document).ready(function() {
+                var table = $('#role').DataTable( {
+                    columnDefs: [
+                        {
+                            targets: -1,
+                            className: 'dt-body-right dt-head-right'
+                        }
+                    ],
+                    "scrollX": true,
+                    "language": {
+                        "lengthMenu": "ショー _MENU_ エントリ",
+                        "zeroRecords": "Nothing found - sorry",
+                        "info": "表示 _PAGE_ of _PAGES_ エントリ",
+                        "infoEmpty": "No records available",
+                        "infoFiltered": "(filtered from _MAX_ total records)",
+                        "search": '<div class="icon-search"></div>',
+                        "searchPlaceholder": "サーチ….",
+                        "paginate": { "previous": '<div class="icon-panging-prev icon-prev"></div>前', "next": '前 <div class="icon-panging-next icon-next"></div>' }
+                    },
+                    
+                });
+                new $.fn.dataTable.Buttons( table, {
+                    buttons: [
+                        {
+                            text: '<div class="float-left icon icon-plus"></div> スクリーニング項目追加',
+                            className: "addnewbutton",
+                            action: function ( e, dt, node, conf ) {
+                                $('#addrole').modal('show')
+                            }
+                        },
+                    ]
+                } );
+                table.buttons( 0, null ).container().prependTo(
+                    table.table().container()
+                );
+            } );
+        </script>
   </body>
 </html>

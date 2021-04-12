@@ -18,9 +18,14 @@
   </head>
 
   <body class="yamaguchi">
-
-    <div id="voyager-loader">
-        <img src="http://127.0.0.1:8000/admin/voyager-assets?path=images%2Flogo-icon.png" alt="Voyager Loader">
+    <div class="preloader">
+       
+        <div id="voyager-loader">
+            <img src="assets/img/preloader.gif" alt="Voyager Loader">
+            <div class="logo-preloader">
+                <img src="assets/img/logo-color.png">
+            </div>
+        </div>
     </div>
     <div class="app-container">
         <div class="fadetoblack visible-xs"></div>
@@ -248,6 +253,7 @@
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js'></script>
     <!-- <script src="assets/js/scripts.js"></script> -->
+
    <script>
        Chart.defaults.doughnutLabels = Chart.helpers.clone(Chart.defaults.doughnut);
 

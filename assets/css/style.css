@@ -147,6 +147,9 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 }
+.text-align-right {
+  text-align:right !important;
+}
 .pt-30 {
   padding-top:30px;
 }
@@ -428,4 +431,131 @@ body.login-wrap .input-group {
 .img-login {
   margin:auto;
   text-align:center;;
+}
+/* .logo-preloader img {
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  margin:auto
+} */
+
+
+
+.logo-preloader img{
+  position: absolute !important;
+  left: 0 !important;
+  right: 0;
+  bottom: 0;
+  top: 0 !important;
+  margin: auto !important;
+  width: 30px !important;
+  height: auto !important;
+  padding-top: 100px;
+}
+.addnewbutton {
+  background-color: #299AB0 !important;
+  background: #299AB0 !important;
+  border-color:#299AB0 !important;
+  border-radius:5px !important;
+  color:#fff !important;
+  font-family: 'YuGothic',sans-serif  !important;
+  /* padding:10px 20px !important; */
+  height:40px !important;
+}
+#role_wrapper .dt-buttons {
+  position:absolute !important;
+  float:right !important;
+  right:0px !important;
+  z-index:2;
+}
+#role_wrapper .dt-buttons .icon {
+  font-size:20px;
+  margin-right:10px;
+}
+div#role_wrapper .dataTables_filter {
+  margin-right:200px !important;
+}
+div.dataTables_filter input, div.dataTables_length select {
+  padding: 0px 10px 0px 30px!important;
+  height: 40px;
+  border-radius: 5px;
+}
+.action-wrap ul {
+  list-style:none;
+  display:inline-block;
+  margin: auto;
+}
+.action-wrap ul li {
+  float:left;
+  padding:10px 5px 0px 5px;
+
+}
+.action-wrap ul li a {
+  font-size:20px;
+}
+.action-wrap ul li a .icon-view {
+  color:#299AB0  !important;
+  font-size: 28px !important;
+}
+.action-wrap ul li a .icon-edit {
+  color:#00944B  !important;
+  font-size: 22px !important;
+}
+.action-wrap ul li a .icon-trash {
+  color:red  !important;
+  font-size: 22px !important;
+}
+table.dataTable thead tr {
+  background-color: #DEF9FE;
+}
+table.dataTable thead td, table.dataTable thead th{
+  border-bottom:2px solid #C0E0E6 !important;
+}
+table.dataTable.display tbody tr.odd, table.dataTable.stripe tbody tr.odd {
+  background-color: #ffffff !important;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1, table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+  background-color: #ffffff !important;
+}
+table.dataTable tbody td {
+  padding:3px 10px !important;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  background-color:#299AB0  !important;
+  border-color: #299AB0  !important;
+  color:#fff !important
+}
+.pagination>li>a, .pagination>li>span {
+  color: #299AB0  !important;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+  color:#adadad !important;
+}
+.icon-search {
+  position: absolute;
+    /* left: 10px; */
+    top: 10px;
+    font-size: 20px;
+    color: #adadad;
+    margin-left: 10px;
+}
+.icon-panging-prev {
+  position:absolute;
+  left: 6px;
+  top: 11px;
+  float: left;
+}
+.icon-panging-next {
+  position:absolute;
+  right:6px;
+  top:11px;
+  float:right
+}
+.form-horizontal {
+  padding:0px 30px !important
+}
+.form-horizontal .control-label {
+  text-align:left !important;
 }
