@@ -182,7 +182,8 @@ ul {
 }
 .btn-tosca {
     background-color:#299AB0;
-    color:#fff
+    color:#fff;
+    margin:auto !important;
 }
 .btn-md {
     padding:10px 0px 
@@ -597,4 +598,32 @@ input[type='radio']:before {
 }
 input[type='radio']:checked:before {
   background:#299AB0;
+}
+.icon-accordion  {
+  float:right;
+  color:#299AB0;
+}
+.panel-accordion-custom .panel-heading h4 {
+  color:#299AB0 !important;
+  font-size: 17px !important;
+  padding:10px 0px !important;
+}
+.panel-accordion-custom .panel-collapse .panel-body {
+  background-color:#fff !important;
+  padding:20px !important
+}
+.panel-sub-accordion-custom .panel-collapse .panel-body {
+  background-color:#fff !important;
+  padding:10px !important;
+  border:none !important
+}
+.panel-sub-accordion-custom .panel-heading h4 {
+  color:rgb(122, 122, 122) !important;
+  font-size: 15px !important;
+  padding:10px 0px !important;
+  margin:auto !important;
+  
+}
+.panel-sub-accordion-custom .panel-heading h4 a {
+  text-decoration:none !important;
 }
