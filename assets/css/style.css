@@ -150,8 +150,32 @@ ul {
 .text-align-right {
   text-align:right !important;
 }
+.bt-1 {
+  border-bottom:1px solid #D3D3D3;
+}
+.ptb-10 {
+  padding:10px 0px 10px 0px !important;
+}
+.pt-10 {
+  padding-top:10px;
+}
+.pt-20 {
+  padding-top:20px;
+}
 .pt-30 {
   padding-top:30px;
+}
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
 }
 .mb-40 {
   margin-bottom: 40px;
@@ -293,7 +317,7 @@ body .navbar-nav ul li.active a, body .navbar-nav ul li.active a .icon {
 }
 
 .panel-custom {
-  padding:20px 10px !important;
+  padding:20px  !important;
   margin: 10px 20px !important;
 }
 .title-page {
@@ -464,17 +488,17 @@ body.login-wrap .input-group {
   /* padding:10px 20px !important; */
   height:40px !important;
 }
-#role_wrapper .dt-buttons {
+#role_wrapper .dt-buttons, #member_wrapper .dt-buttons {
   position:absolute !important;
   float:right !important;
   right:0px !important;
   z-index:2;
 }
-#role_wrapper .dt-buttons .icon {
+#role_wrapper .dt-buttons .icon, #member_wrapper .dt-buttons .icon {
   font-size:20px;
   margin-right:10px;
 }
-div#role_wrapper .dataTables_filter {
+div#role_wrapper .dataTables_filter, div#member_wrapper .dataTables_filter {
   margin-right:200px !important;
 }
 div.dataTables_filter input, div.dataTables_length select {
@@ -554,8 +578,23 @@ table.dataTable tbody td {
   float:right
 }
 .form-horizontal {
-  padding:0px 30px !important
+  
 }
 .form-horizontal .control-label {
   text-align:left !important;
+}
+input[type='radio']:checked:before {
+  background:#299AB0 !important ;
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:55%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;    
+}
+input[type='radio']:checked:before {
+  background:#299AB0;
 }

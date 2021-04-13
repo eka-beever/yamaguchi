@@ -11,6 +11,8 @@
 
     <!-- <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href=" https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css" rel="stylesheet">
+   
 
     <!-- don't copy or edit, this library generate from voyager -->
     <link rel="stylesheet" href="assets/lib/voyager/app.css">
@@ -19,8 +21,13 @@
 
   <body class="yamaguchi">
 
-    <div id="voyager-loader">
-        <img src="http://127.0.0.1:8000/admin/voyager-assets?path=images%2Flogo-icon.png" alt="Voyager Loader">
+    <div class="preloader">
+        <div id="voyager-loader">
+            <img src="assets/img/preloader.gif" alt="Voyager Loader">
+            <div class="logo-preloader">
+                <img src="assets/img/logo-color.png">
+            </div>
+        </div>
     </div>
     <div class="app-container">
         <div class="fadetoblack visible-xs"></div>
@@ -43,26 +50,6 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-animated">
-                                <!-- <li class="profile-img">
-                                    <img src="http://localhost/storage/users/default.png" class="profile-img">
-                                    <div class="profile-body">
-                                        <h5>Admin</h5>
-                                        <h6>admin@admin.com</h6>
-                                    </div>
-                                </li>
-                                <li class="divider"></li>
-                                <li class="class-full-of-rum">
-                                    <a href="#" >
-                                        <i class="voyager-person"></i>
-                                        Profile
-                                    </a>
-                                </li>
-                                <li >
-                                    <a href="/" target="_blank">
-                                        <i class="voyager-home"></i>
-                                        Home
-                                    </a>
-                                </li> -->
                                 <li >
                                     <form action="index.html">
                                         <input type="hidden" >
@@ -157,9 +144,476 @@
                             <div class="title-page">会員データ</div>
                             <div class="clearfix container-fluid row">
                                 <div class='col-lg-12  no-padding'>
-                                    <div class="panel widget center bgimage panel-custom">
+                                    <div class="panel widget  bgimage panel-custom">
                                         <div class="panel-content"> 
-                                           
+                                            <div class="table-responsive">
+                                                <table id="member" class="display nowrap" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>登録日</th>
+                                                            <th>メンバー番号</th>
+                                                            <th>名</th>
+                                                            <th >性別</th>
+                                                            <th>生年月日</th>
+                                                            <th>電話番号</th>
+                                                            <th>アクション</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19/02/2019</td>
+                                                            <td>001234567001</td>
+                                                            <td>Joy Geraldine</td>
+                                                            <td>女性</td>
+                                                            <td>30/01/1997</td>
+                                                            <td>+620817771188</td>
+                                                            <td >
+                                                                <div class="action-wrap">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon  icon-view"></div>
+                                                                            </a>
+                                                                           
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <div class="icon icon-edit"></div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -177,5 +631,45 @@
 
     <!-- don't copy or edit, this library generate from voyager -->
     <script type="text/javascript" src="assets//lib/voyager/app.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+        <!-- DataTables -->
+        <script>
+            $(document).ready(function() {
+                 var table = $('#member').DataTable( {
+                     columnDefs: [
+                         {
+                             targets: -1,
+                             className: 'dt-body-right dt-head-right'
+                         }
+                     ],
+                     "scrollX": true,
+                     "language": {
+                         "lengthMenu": "ショー _MENU_ エントリ",
+                         "zeroRecords": "Nothing found - sorry",
+                         "info": "表示 _PAGE_ of _PAGES_ エントリ",
+                         "infoEmpty": "No records available",
+                         "infoFiltered": "(filtered from _MAX_ total records)",
+                         "search": '<div class="icon-search"></div>',
+                         "searchPlaceholder": "サーチ….",
+                         "paginate": { "previous": '<div class="icon-panging-prev icon-prev"></div>前', "next": '前 <div class="icon-panging-next icon-next"></div>' }
+                     },
+                     
+                 });
+                 new $.fn.dataTable.Buttons( table, {
+                     buttons: [
+                         {
+                             text: '<div class="float-left icon icon-plus"></div> スクリーニング項目追加',
+                             className: "addnewbutton",
+                             action: function ( e, dt, node, conf ) {
+                                window.location = 'add-new-form-customer.html';
+                             }
+                         },
+                     ]
+                 } );
+                 table.buttons( 0, null ).container().prependTo(
+                     table.table().container()
+                 );
+             } );
+         </script>
   </body>
 </html>
