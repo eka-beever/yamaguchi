@@ -19,8 +19,13 @@
 
   <body class="yamaguchi">
 
-    <div id="voyager-loader">
-        <img src="http://127.0.0.1:8000/admin/voyager-assets?path=images%2Flogo-icon.png" alt="Voyager Loader">
+    <div class="preloader">
+        <div id="voyager-loader">
+            <img src="assets/img/preloader.gif" alt="Voyager Loader">
+            <div class="logo-preloader">
+                <img src="assets/img/logo-color.png">
+            </div>
+        </div>
     </div>
     <div class="app-container">
         <div class="fadetoblack visible-xs"></div>
@@ -136,12 +141,307 @@
                 <div class="side-body padding-top">
                    
                         <div class="page-content">
-                            <div class="title-page">項目追加</div>
+                            <div class="title-page">アップロード</div>
+                            <div class="clearfix container-fluid row">
+                                <div class='col-lg-12  no-padding'>
+                                   <div class="upload-wrap">
+                                    <div class="zone">
+                                        <div id="dropZ">
+                                          <div class="title-drop-zone">ここにフアイルをドラッグ＆ドロップすると <br> アップロードが開始されます </div>                    
+                                         
+                                          <div class="selectFile btn-tosca">       
+                                            <label for="file">またはファイルを滴択する </label>                   
+                                            <input type="file" name="files[]" id="file">
+                                          </div>
+                                          <div class="clearfix"></div>
+                                        </div>
+                                      
+                                      </div>
+                                   </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="title-page">テンプレートのダウンロード</div>
                             <div class="clearfix container-fluid row">
                                 <div class='col-lg-12  no-padding'>
                                     <div class="panel widget center bgimage panel-custom">
                                         <div class="panel-content"> 
-                                           
+                                            <form>
+                                                <!-- 1 -->
+                                                <div class="col-lg-12 ptb-10 bt-1 mb-30">
+                                                    <div class="title-content">形態測定データ</div>
+                                                </div>
+                                                <div class="row"  data-toggle="buttons">
+                                                    <div class="col-md-5ths">
+                                                        <div class="btn btn-outline btn-block ">
+                                                            <input type="checkbox" autocomplete="off"> 測定年月日
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5ths ">
+                                                        <div class="btn btn-outline btn-block">
+                                                            <input type="checkbox" autocomplete="off"> 身長
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5ths">
+                                                        <div class="btn btn-outline btn-block">
+                                                            <input type="checkbox" autocomplete="off"> 体重
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5ths">
+                                                        <div class="btn btn-outline btn-block">
+                                                            <input type="checkbox" autocomplete="off"> 体脂肪
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5ths ">
+                                                        <div class="btn btn-outline btn-block">
+                                                        <input type="checkbox" autocomplete="off"> 血圧
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                 <!-- 2 -->
+                                                <div class="col-lg-12 ptb-10 bt-1 mb-30">
+                                                    <div class="title-content">体力測定データ</div>
+                                                </div>
+                                                <div  data-toggle="buttons">
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off"> 測定年月日
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 握力
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 状態起こし
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 長座体前屈
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 開眼片足立ち
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">10メートル障害歩行
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 6分間歩行距離
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="col-lg-12 ptb-10 bt-1 mb-30">
+                                                    <div class="title-content">血液検査測定データ</div>
+                                                </div>
+                                                <div  data-toggle="buttons">
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off"> 測定年月日
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> AST
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off">ALT
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> y-GT
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> HDL-コレステロール
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">LDL-コレステロール
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 中性脂肪
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">尿酸
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> クレアチン
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 血糖
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">HbA1c
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 白血球
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">赤血球
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> ヘモグロビン量
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> ヘマトクリット値
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">MCV
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> MCH
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off">MCHC血小板数
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="col-lg-12 ptb-10 bt-1 mb-30">
+                                                    <div class="title-content">生活習慣データ</div>
+                                                </div>
+                                                <div data-toggle="buttons">
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off"> 測定年月日
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 喫煙
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 飲酒状況
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> １日の食生活
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                            <input type="checkbox" autocomplete="off"> 睡眠
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5ths">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off"> 運動習慣
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5ths ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> その他
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 5 -->
+                                                <div class="col-lg-12 ptb-10 bt-1 mb-30">
+                                                    <div class="title-content">生活習慣データ</div>
+                                                </div>
+                                                <div data-toggle="buttons">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off"> セミナー参加記録
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 参加セミナー名称
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> セミナー参加年月日
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="btn btn-outline btn-block ">
+                                                                <input type="checkbox" autocomplete="off"> モニター参加記録
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> 参加モニター名称
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 ">
+                                                            <div class="btn btn-outline btn-block">
+                                                                <input type="checkbox" autocomplete="off"> モニター参加年月日
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12  bt-1 mb-20"></div>
+                                                <button class="btn btn-tosca float-right mt-20">アップロード用CSVファイルのダウンロード</button>
+                                            </form>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>

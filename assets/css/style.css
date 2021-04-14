@@ -185,11 +185,58 @@ ul {
     color:#fff;
     margin:auto !important;
 }
+.btn-outline {
+  border:2px solid #D3D3D3 !important;
+  color:#D3D3D3 !important;
+  background-color:#fff !important;
+  margin:0px 0px;
+}
+.btn-outline.active {
+  border:2px solid #F79655 !important;
+  color:#F79655 !important;
+  background-color:#fff !important;
+}
+.btn-outline input[type=checkbox], .btn-outline input[type=radio] {
+  display:none;
+}
 .btn-md {
     padding:10px 0px 
 }
 .color-tosca {
     color:#299AB0;
+}
+/*  */
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }
 /* Layout */
 .background-white {
@@ -626,4 +673,58 @@ input[type='radio']:checked:before {
 }
 .panel-sub-accordion-custom .panel-heading h4 a {
   text-decoration:none !important;
+}
+.upload-wrap {
+  border:2px dotted #adadad;
+  border-radius:10px;
+  margin:10px 20px;
+  padding:20px
+}
+.upload-wrap input[type='file'] {
+  padding: 140px 50px 10px 50px;
+  cursor: move;
+  position: relative;
+  background-color: #EBEBEB;
+  width: 100%;
+  border-radius: 10px;
+}
+.zone {
+  margin: auto;
+  background-color: #EBEBEB;
+  text-align: center;
+  color: white;
+  z-index: 20;
+  border-radius: 10px;
+  padding: 20px;
+}
+.zone .btnCompression .active {
+  color: white;
+}
+
+.zone .selectFile {
+  height: 40px;
+  margin: 20px auto;
+  position: relative;
+  width: 200px;
+}
+.zone label,
+.zone input {
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+.zone label {
+  padding: 10px;
+}
+.zone input[type=file] {
+  opacity: 0;
+}
+.title-drop-zone {
+  color: #797979;
+  margin-bottom:20px;
 }
