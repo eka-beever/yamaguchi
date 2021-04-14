@@ -459,5 +459,34 @@
 
     <!-- don't copy or edit, this library generate from voyager -->
     <script type="text/javascript" src="assets//lib/voyager/app.js"></script>
+    <script>
+        $(document).bind('dragover', function (e) {
+            var dropZone = $('.zone'),
+                timeout = window.dropZoneTimeout;
+            if (!timeout) {
+                dropZone.addClass('in');
+            } else {
+                clearTimeout(timeout);
+            }
+            var found = false,
+                node = e.target;
+            do {
+                if (node === dropZone[0]) {
+                    found = true;
+                    break;
+                }
+                node = node.parentNode;
+            } while (node != null);
+            if (found) {
+                dropZone.addClass('hover');
+            } else {
+                dropZone.removeClass('hover');
+            }
+            window.dropZoneTimeout = setTimeout(function () {
+                window.dropZoneTimeout = null;
+                dropZone.removeClass('in hover');
+            }, 100);
+        });
+    </script>
   </body>
 </html>
