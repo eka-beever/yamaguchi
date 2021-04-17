@@ -557,6 +557,16 @@ body.login-wrap .input-group {
   /* padding:10px 20px !important; */
   height:40px !important;
 }
+.downloadcsv {
+  background-color: #F79655 !important;
+  background: #F79655 !important;
+  border-color:#F79655 !important;
+  border-radius:5px !important;
+  color:#fff !important;
+  font-family: 'YuGothic',sans-serif  !important;
+  /* padding:10px 20px !important; */
+  height:40px !important;
+}
 #role_wrapper .dt-buttons, #member_wrapper .dt-buttons {
   position:absolute !important;
   float:right !important;
@@ -570,6 +580,21 @@ body.login-wrap .input-group {
 div#role_wrapper .dataTables_filter, div#member_wrapper .dataTables_filter {
   margin-right:200px !important;
 }
+
+#resultA_wrapper .dt-buttons {
+  position:absolute !important;
+  float:right !important;
+  right:0px !important;
+  z-index:2;
+}
+#resultA_wrapper .dt-buttons .icon {
+  font-size:20px;
+  margin-right:10px;
+}
+div#resultA_wrapper .dataTables_filter {
+  margin-right:390px !important;
+}
+
 div.dataTables_filter input, div.dataTables_length select {
   padding: 0px 10px 0px 30px!important;
   height: 40px;
@@ -612,9 +637,9 @@ table.dataTable.display tbody tr.odd, table.dataTable.stripe tbody tr.odd {
 table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1, table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
   background-color: #ffffff !important;
 }
-table.dataTable tbody td {
+/* table.dataTable tbody td {
   padding:3px 10px !important;
-}
+} */
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
   background-color:#299AB0  !important;
   border-color: #299AB0  !important;
@@ -801,4 +826,13 @@ a.ui-button:active,
 	background: #0E869D !important;
 	font-weight: normal;
 	color: #ffffff;
+}
+table.dataTable thead th.th-orange {
+  background-color: #FFE8C3 !important;
+  border-bottom: 2px solid #FFBB8E !important;
+}
+
+.col-centered{
+  float: none !important;
+  margin: 0 auto;
 }

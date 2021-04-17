@@ -146,7 +146,7 @@
                                 <div class='col-lg-12  no-padding'>
                                     <div class="panel widget center bgimage panel-custom">
                                         <div class="panel-content"> 
-                                            <form>
+                                            <form action="screening-resultA.html">
                                                 <!-- 1 -->
                                                 <div class="col-lg-12 ptb-10 bt-1 mb-30">
                                                     <div class="title-content">形態測定データ</div>
@@ -194,7 +194,7 @@
                                                         </div>
                                                         <div class="col-md-3 ">
                                                             <div class="col-md-6 no-padding-left">
-                                                                <button class="btn btn-outline float-right btn-block">人</button>
+                                                                <a class="btn btn-outline float-right btn-block"  data-toggle="modal" data-target="#info">人</a>
                                                             </div>
                                                             <div class="col-md-6 no-padding-right">
                                                                 <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
@@ -219,7 +219,7 @@
                                                         </div>
                                                         <div class="col-md-3 ">
                                                             <div class="col-md-6 no-padding-left">
-                                                                <button class="btn btn-outline float-right btn-block">人</button>
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
                                                             </div>
                                                             <div class="col-md-6 no-padding-right">
                                                                 <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
@@ -244,7 +244,7 @@
                                                         </div>
                                                         <div class="col-md-3 ">
                                                             <div class="col-md-6 no-padding-left">
-                                                                <button class="btn btn-outline float-right btn-block">人</button>
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
                                                             </div>
                                                             <div class="col-md-6 no-padding-right">
                                                                 <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
@@ -269,7 +269,7 @@
                                                         </div>
                                                         <div class="col-md-3 ">
                                                             <div class="col-md-6 no-padding-left">
-                                                                <button class="btn btn-outline float-right btn-block">人</button>
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
                                                             </div>
                                                             <div class="col-md-6 no-padding-right">
                                                                 <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
@@ -294,7 +294,7 @@
                                                         </div>
                                                         <div class="col-md-3 ">
                                                             <div class="col-md-6 no-padding-left">
-                                                                <button class="btn btn-outline float-right btn-block">人</button>
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
                                                             </div>
                                                             <div class="col-md-6 no-padding-right">
                                                                 <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
@@ -310,45 +310,229 @@
                                                 <div  data-toggle="buttons">
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showB1">
                                                                 <input type="checkbox" autocomplete="off"> 測定年月日
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showB2">
                                                                 <input type="checkbox" autocomplete="off"> 握力
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showB3">
                                                                 <input type="checkbox" autocomplete="off"> 状態起こし
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showB4">
                                                                 <input type="checkbox" autocomplete="off"> 長座体前屈
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showB5">
                                                                 <input type="checkbox" autocomplete="off"> 開眼片足立ち
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showB6">
                                                                 <input type="checkbox" autocomplete="off">10メートル障害歩行
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block " id="showB7">
                                                                 <input type="checkbox" autocomplete="off"> 6分間歩行距離
                                                             </div>
                                                         </div>
                                                        
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div id="show-wrapB1" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">測定年月日</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB1" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB1" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB1" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- B2 -->
+                                                <div class="row">
+                                                    <div id="show-wrapB2" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">握力</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB2" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB2" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB2" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- B3 -->
+                                                <div class="row">
+                                                    <div id="show-wrapB3" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">状態起こし</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB3" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB3" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB3" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- B4 -->
+                                                <div class="row">
+                                                    <div id="show-wrapB4" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">長座体前屈</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB4" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB4" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB4" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- B5 -->
+                                                <div class="row">
+                                                    <div id="show-wrapB5" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">開眼片足立ち</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB5" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB5" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB5" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- B6 -->
+                                                <div class="row">
+                                                    <div id="show-wrapB6" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">10メートル障害歩行</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB6" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB6" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB6" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- B7 -->
+                                                <div class="row">
+                                                    <div id="show-wrapB7" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">6分間歩行距離</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minB7" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeB7" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxB7" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+
                                                 <!-- 3 -->
                                                 <div class="col-lg-12 ptb-10 bt-1 mb-30">
                                                     <div class="title-content">血液検査測定データ</div>
@@ -356,55 +540,55 @@
                                                 <div  data-toggle="buttons">
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC1">
                                                                 <input type="checkbox" autocomplete="off"> 測定年月日
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC2">
                                                                 <input type="checkbox" autocomplete="off"> AST
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC3">
                                                                 <input type="checkbox" autocomplete="off">ALT
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC4">
                                                                 <input type="checkbox" autocomplete="off"> y-GT
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC5">
                                                                 <input type="checkbox" autocomplete="off"> HDL-コレステロール
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC6">
                                                                 <input type="checkbox" autocomplete="off">LDL-コレステロール
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC7">
                                                                 <input type="checkbox" autocomplete="off"> 中性脂肪
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC8">
                                                                 <input type="checkbox" autocomplete="off">尿酸
 
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC9">
                                                                 <input type="checkbox" autocomplete="off"> クレアチン
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC10">
                                                                 <input type="checkbox" autocomplete="off"> 血糖
                                                             </div>
                                                         </div>
@@ -412,27 +596,27 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC11">
                                                                 <input type="checkbox" autocomplete="off">HbA1c
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC12">
                                                                 <input type="checkbox" autocomplete="off"> 白血球
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC13">
                                                                 <input type="checkbox" autocomplete="off">赤血球
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC14">
                                                                 <input type="checkbox" autocomplete="off"> ヘモグロビン量
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC15">
                                                                 <input type="checkbox" autocomplete="off"> ヘマトクリット値
                                                             </div>
                                                         </div>
@@ -440,20 +624,490 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC16">
                                                                 <input type="checkbox" autocomplete="off">MCV
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showC17">
                                                                 <input type="checkbox" autocomplete="off"> MCH
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showC18">
                                                                 <input type="checkbox" autocomplete="off">MCHC血小板数
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <!-- C1 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC1" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">測定年月日</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC1" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC1" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC1" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C2 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC2" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10"> AST</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC2" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC2" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC2" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C3 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC3" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">ALT</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC3" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC3" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC3" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C4 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC4" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">y-GT</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC4" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC4" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC4" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C5 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC5" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">HDL-コレステロール</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC5" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC5" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC5" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C6 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC6" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">LDL-コレステロール</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC6" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC6" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC6" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C7 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC7" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">中性脂肪</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC7" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC7" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC7" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C8 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC8" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">尿酸</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC8" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC8" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC8" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C9 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC9" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">クレアチン</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC9" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC9" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC9" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C10 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC10" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">血糖</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC10" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC10" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC10" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C11 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC11" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">HbA1c</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC11" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC11" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC11" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C12 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC12" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">白血球</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC12" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC12" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC12" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C13 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC13" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">赤血球
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC13" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC13" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC13" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C14 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC14" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">ヘモグロビン量</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC14" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC14" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC14" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C15 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC15" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">ヘマトクリット値</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC15" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC15" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC15" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C16 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC16" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">MCV
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC16" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC16" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC16" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C17 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC17" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">MCH</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC17" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC17" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC17" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- C18 -->
+                                                <div class="row">
+                                                    <div id="show-wrapC18" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">MCHC血小板数</div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"  min=0 max="100" oninput="validity.valid||(value='0');" id="minC18" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div id="slider-rangeC18" class="filter-range mt-15" name="rangeInput"></div>
+                                                        </div>
+                                                        <div class="col-md-1 no-padding">
+                                                            <input type="number"   min=0 max="100" oninput="validity.valid||(value='100');" id="maxC18" class="range-field mt-5" />
+                                                        </div>
+                                                        <div class="col-md-3 ">
+                                                            <div class="col-md-6 no-padding-left">
+                                                                <a class="btn btn-outline float-right btn-block" data-toggle="modal" data-target="#info">人</a>
+                                                            </div>
+                                                            <div class="col-md-6 no-padding-right">
+                                                                <button class="btn btn-outline-tosca float-right btn-block">詳細</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
                                                     </div>
                                                 </div>
                                                 <!-- 4 -->
@@ -463,42 +1117,105 @@
                                                 <div data-toggle="buttons">
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showD1">
                                                                 <input type="checkbox" autocomplete="off"> 測定年月日
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showD2">
                                                                 <input type="checkbox" autocomplete="off"> 喫煙
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showD3">
                                                                 <input type="checkbox" autocomplete="off"> 飲酒状況
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showD4">
                                                                 <input type="checkbox" autocomplete="off"> １日の食生活
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showD5">
                                                             <input type="checkbox" autocomplete="off"> 睡眠
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-5ths">
-                                                            <div class="btn btn-outline btn-block ">
+                                                            <div class="btn btn-outline btn-block " id="showD6">
                                                                 <input type="checkbox" autocomplete="off"> 運動習慣
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5ths ">
-                                                            <div class="btn btn-outline btn-block">
+                                                            <div class="btn btn-outline btn-block" id="showD7">
                                                                 <input type="checkbox" autocomplete="off"> その他
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <!-- D1 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD1" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">測定年月日</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- D2 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD2" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">喫煙</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- D3 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD3" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">飲酒状況</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- D4 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD4" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">１日の食生活</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- D5 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD5" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">睡眠</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- D6 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD6" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">運動習慣</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- D7 -->
+                                                <div class="row">
+                                                    <div id="show-wrapD7" class="mb-20">
+                                                        <div class="col-md-2">
+                                                            <div class="title color-orange mt-10">その他</div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
                                                     </div>
                                                 </div>
                                                 <!-- 5 -->
@@ -560,10 +1277,42 @@
              </div>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="info" tabindex="-1" role="dialog" >
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title color-tosca" id="myModalLabel"><center>アイテム追加</center></h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-horizontal">
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">アップロード</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">メールアドレス</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">権限グループ</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        </div>
+    </div>
     <!-- don't copy or edit, this library generate from voyager -->
     <script type="text/javascript" src="assets//lib/voyager/app.js"></script>
-    
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
     <script>
         $(document).ready(function(){
@@ -589,6 +1338,196 @@
             $("#show-wrapA5").hide();
             $("#showA5").click(function(){
                 $("#show-wrapA5").toggle();
+            });
+            // B1
+            $("#show-wrapB1").hide();
+            $("#showB1").click(function(){
+                $("#show-wrapB1").toggle();
+            });
+            // B2
+            $("#show-wrapB2").hide();
+            $("#showB2").click(function(){
+                $("#show-wrapB2").toggle();
+            });
+            // B3
+            $("#show-wrapB3").hide();
+            $("#showB3").click(function(){
+                $("#show-wrapB3").toggle();
+            });
+            // B4
+            $("#show-wrapB4").hide();
+            $("#showB4").click(function(){
+                $("#show-wrapB4").toggle();
+            });
+            // B5
+            $("#show-wrapB5").hide();
+            $("#showB5").click(function(){
+                $("#show-wrapB5").toggle();
+            });
+            // B6
+            $("#show-wrapB6").hide();
+            $("#showB6").click(function(){
+                $("#show-wrapB6").toggle();
+            });
+            // B7
+            $("#show-wrapB7").hide();
+            $("#showB7").click(function(){
+                $("#show-wrapB7").toggle();
+            });
+            // C1
+            $("#show-wrapC1").hide();
+            $("#showC1").click(function(){
+                $("#show-wrapC1").toggle();
+            });
+            // C2
+            $("#show-wrapC2").hide();
+            $("#showC2").click(function(){
+                $("#show-wrapC2").toggle();
+            });
+            // C3
+            $("#show-wrapC3").hide();
+            $("#showC3").click(function(){
+                $("#show-wrapC3").toggle();
+            });
+            // C4
+            $("#show-wrapC4").hide();
+            $("#showC4").click(function(){
+                $("#show-wrapC4").toggle();
+            });
+            // C5
+            $("#show-wrapC5").hide();
+            $("#showC5").click(function(){
+                $("#show-wrapC5").toggle();
+            });
+            // C6
+            $("#show-wrapC6").hide();
+            $("#showC6").click(function(){
+                $("#show-wrapC6").toggle();
+            });
+            // C7
+            $("#show-wrapC7").hide();
+            $("#showC7").click(function(){
+                $("#show-wrapC7").toggle();
+            });
+            // C8
+            $("#show-wrapC8").hide();
+            $("#showC8").click(function(){
+                $("#show-wrapC8").toggle();
+            });
+            // C9
+            $("#show-wrapC9").hide();
+            $("#showC9").click(function(){
+                $("#show-wrapC9").toggle();
+            });
+            // C10
+            $("#show-wrapC10").hide();
+            $("#showC10").click(function(){
+                $("#show-wrapC10").toggle();
+            });
+            // C11
+            $("#show-wrapC11").hide();
+            $("#showC11").click(function(){
+                $("#show-wrapC11").toggle();
+            });
+            // C12
+            $("#show-wrapC12").hide();
+            $("#showC12").click(function(){
+                $("#show-wrapC12").toggle();
+            });
+            // C13
+            $("#show-wrapC13").hide();
+            $("#showC13").click(function(){
+                $("#show-wrapC13").toggle();
+            });
+            // C14
+            $("#show-wrapC14").hide();
+            $("#showC14").click(function(){
+                $("#show-wrapC14").toggle();
+            });
+            // C15
+            $("#show-wrapC15").hide();
+            $("#showC15").click(function(){
+                $("#show-wrapC15").toggle();
+            });
+            // C16
+            $("#show-wrapC16").hide();
+            $("#showC16").click(function(){
+                $("#show-wrapC16").toggle();
+            });
+            // C17
+            $("#show-wrapC17").hide();
+            $("#showC17").click(function(){
+                $("#show-wrapC17").toggle();
+            });
+            // C18
+            $("#show-wrapC18").hide();
+            $("#showC18").click(function(){
+                $("#show-wrapC18").toggle();
+            });
+            // D1
+            $("#show-wrapD1").hide();
+            $("#showD1").click(function(){
+                $("#show-wrapD1").toggle();
+            });
+            // D2
+            $("#show-wrapD2").hide();
+            $("#showD2").click(function(){
+                $("#show-wrapD2").toggle();
+            });
+            // D3
+            $("#show-wrapD3").hide();
+            $("#showD3").click(function(){
+                $("#show-wrapD3").toggle();
+            });
+            // D4
+            $("#show-wrapD4").hide();
+            $("#showD4").click(function(){
+                $("#show-wrapD4").toggle();
+            });
+            // D5
+            $("#show-wrapD5").hide();
+            $("#showD5").click(function(){
+                $("#show-wrapD5").toggle();
+            });
+            // D6
+            $("#show-wrapD6").hide();
+            $("#showD6").click(function(){
+                $("#show-wrapD6").toggle();
+            });
+            // D7
+            $("#show-wrapD7").hide();
+            $("#showD7").click(function(){
+                $("#show-wrapD7").toggle();
+            });
+            // E1
+            $("#show-wrapE1").hide();
+            $("#showE1").click(function(){
+                $("#show-wrapE1").toggle();
+            });
+            // E2
+            $("#show-wrapE2").hide();
+            $("#showE2").click(function(){
+                $("#show-wrapE2").toggle();
+            });
+            // E3
+            $("#show-wrapE3").hide();
+            $("#showE3").click(function(){
+                $("#show-wrapE3").toggle();
+            });
+            // E4
+            $("#show-wrapE4").hide();
+            $("#showE4").click(function(){
+                $("#show-wrapE4").toggle();
+            });
+            // E5
+            $("#show-wrapE5").hide();
+            $("#showE5").click(function(){
+                $("#show-wrapE5").toggle();
+            });
+            // E6
+            $("#show-wrapE6").hide();
+            $("#showE6").click(function(){
+                $("#show-wrapE6").toggle();
             });
         });
         $(document).ready(function(){
@@ -664,8 +1603,8 @@
                 });
                 $("#minA4").val($("#slider-rangeA4").slider("values", 0));
                 $("#maxA4").val($("#slider-rangeA4").slider("values", 1));
-                 // 5
-                 $("#slider-rangeA5").slider({
+                // 5
+                $("#slider-rangeA5").slider({
                     range: true,
                     orientation: "horizontal",
                     min: 0,
@@ -682,6 +1621,458 @@
                 });
                 $("#minA5").val($("#slider-rangeA5").slider("values", 0));
                 $("#maxA5").val($("#slider-rangeA5").slider("values", 1));
+                // B1
+                $("#slider-rangeB1").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB1").val(ui.values[0]);
+                    $("#maxB1 ").val(ui.values[1]);
+                    }
+                });
+                $("#minB1").val($("#slider-rangeB1").slider("values", 0));
+                $("#maxB1").val($("#slider-rangeB1").slider("values", 1));
+                // B2
+                $("#slider-rangeB2").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB2").val(ui.values[0]);
+                    $("#maxB2 ").val(ui.values[1]);
+                    }
+                });
+                $("#minB2").val($("#slider-rangeB2").slider("values", 0));
+                $("#maxB2").val($("#slider-rangeB2").slider("values", 1));
+                // B3
+                $("#slider-rangeB3").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB3").val(ui.values[0]);
+                    $("#maxB3 ").val(ui.values[1]);
+                    }
+                });
+                $("#minB3").val($("#slider-rangeB3").slider("values", 0));
+                $("#maxB3").val($("#slider-rangeB3").slider("values", 1));
+                // B4
+                $("#slider-rangeB4").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB4").val(ui.values[0]);
+                    $("#maxB4 ").val(ui.values[1]);
+                    }
+                });
+                $("#minB4").val($("#slider-rangeB4").slider("values", 0));
+                $("#maxB4").val($("#slider-rangeB4").slider("values", 1));
+
+                // B5
+                $("#slider-rangeB5").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB5").val(ui.values[0]);
+                    $("#maxB5 ").val(ui.values[1]);
+                    }
+                });
+                $("#minB5").val($("#slider-rangeB5").slider("values", 0));
+                $("#maxB5").val($("#slider-rangeB5").slider("values", 1));
+                // B6
+                $("#slider-rangeB6").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB6").val(ui.values[0]);
+                    $("#maxB6 ").val(ui.values[1]);
+                    }
+                });
+                $("#minB6").val($("#slider-rangeB6").slider("values", 0));
+                $("#maxB6").val($("#slider-rangeB6").slider("values", 1));
+                // B7
+                $("#slider-rangeB7").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minB7").val(ui.values[0]);
+                    $("#maxB7").val(ui.values[1]);
+                    }
+                });
+                $("#minB7").val($("#slider-rangeB7").slider("values", 0));
+                $("#maxB7").val($("#slider-rangeB7").slider("values", 1));
+
+                // C1
+                $("#slider-rangeC1").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC1").val(ui.values[0]);
+                    $("#maxC1").val(ui.values[1]);
+                    }
+                });
+                $("#minC1").val($("#slider-rangeC1").slider("values", 0));
+                $("#maxC1").val($("#slider-rangeC1").slider("values", 1));
+                // C2
+                $("#slider-rangeC2").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC2").val(ui.values[0]);
+                    $("#maxC2").val(ui.values[1]);
+                    }
+                });
+                $("#minC2").val($("#slider-rangeC2").slider("values", 0));
+                $("#maxC2").val($("#slider-rangeC2").slider("values", 1));
+                // C3
+                $("#slider-rangeC3").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC3").val(ui.values[0]);
+                    $("#maxC3").val(ui.values[1]);
+                    }
+                });
+                $("#minC3").val($("#slider-rangeC3").slider("values", 0));
+                $("#maxC3").val($("#slider-rangeC3").slider("values", 1));
+                // C4
+                $("#slider-rangeC4").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC4").val(ui.values[0]);
+                    $("#maxC4").val(ui.values[1]);
+                    }
+                });
+                $("#minC4").val($("#slider-rangeC4").slider("values", 0));
+                $("#maxC4").val($("#slider-rangeC4").slider("values", 1));
+                // C5
+                $("#slider-rangeC5").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC5").val(ui.values[0]);
+                    $("#maxC5").val(ui.values[1]);
+                    }
+                });
+                $("#minC5").val($("#slider-rangeC5").slider("values", 0));
+                $("#maxC5").val($("#slider-rangeC5").slider("values", 1));
+                // C6
+                $("#slider-rangeC6").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC6").val(ui.values[0]);
+                    $("#maxC6").val(ui.values[1]);
+                    }
+                });
+                $("#minC6").val($("#slider-rangeC6").slider("values", 0));
+                $("#maxC6").val($("#slider-rangeC6").slider("values", 1));
+                // C7
+                $("#slider-rangeC7").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC7").val(ui.values[0]);
+                    $("#maxC7").val(ui.values[1]);
+                    }
+                });
+                $("#minC7").val($("#slider-rangeC7").slider("values", 0));
+                $("#maxC7").val($("#slider-rangeC7").slider("values", 1));
+                // C8
+                $("#slider-rangeC8").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC8").val(ui.values[0]);
+                    $("#maxC8").val(ui.values[1]);
+                    }
+                });
+                $("#minC8").val($("#slider-rangeC8").slider("values", 0));
+                $("#maxC8").val($("#slider-rangeC8").slider("values", 1));
+                // C9
+                $("#slider-rangeC9").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC9").val(ui.values[0]);
+                    $("#maxC9").val(ui.values[1]);
+                    }
+                });
+                $("#minC9").val($("#slider-rangeC9").slider("values", 0));
+                $("#maxC9").val($("#slider-rangeC9").slider("values", 1));
+                // C10
+                $("#slider-rangeC10").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC10").val(ui.values[0]);
+                    $("#maxC10").val(ui.values[1]);
+                    }
+                });
+                $("#minC10").val($("#slider-rangeC10").slider("values", 0));
+                $("#maxC10").val($("#slider-rangeC10").slider("values", 1));
+                // C11
+                $("#slider-rangeC11").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC11").val(ui.values[0]);
+                    $("#maxC11").val(ui.values[1]);
+                    }
+                });
+                $("#minC11").val($("#slider-rangeC11").slider("values", 0));
+                $("#maxC11").val($("#slider-rangeC11").slider("values", 1));
+                // C12
+                $("#slider-rangeC12").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC12").val(ui.values[0]);
+                    $("#maxC12").val(ui.values[1]);
+                    }
+                });
+                $("#minC12").val($("#slider-rangeC12").slider("values", 0));
+                $("#maxC12").val($("#slider-rangeC12").slider("values", 1));
+                // C13
+                $("#slider-rangeC13").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC13").val(ui.values[0]);
+                    $("#maxC13").val(ui.values[1]);
+                    }
+                });
+                $("#minC13").val($("#slider-rangeC13").slider("values", 0));
+                $("#maxC13").val($("#slider-rangeC13").slider("values", 1));
+                // C14
+                $("#slider-rangeC14").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC14").val(ui.values[0]);
+                    $("#maxC14").val(ui.values[1]);
+                    }
+                });
+                $("#minC14").val($("#slider-rangeC14").slider("values", 0));
+                $("#maxC14").val($("#slider-rangeC14").slider("values", 1));
+                // C15
+                $("#slider-rangeC15").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC15").val(ui.values[0]);
+                    $("#maxC15").val(ui.values[1]);
+                    }
+                });
+                $("#minC15").val($("#slider-rangeC15").slider("values", 0));
+                $("#maxC15").val($("#slider-rangeC15").slider("values", 1));
+                // C16
+                $("#slider-rangeC16").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC16").val(ui.values[0]);
+                    $("#maxC16").val(ui.values[1]);
+                    }
+                });
+                $("#minC16").val($("#slider-rangeC16").slider("values", 0));
+                $("#maxC16").val($("#slider-rangeC16").slider("values", 1));
+                // C17
+                $("#slider-rangeC17").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC17").val(ui.values[0]);
+                    $("#maxC17").val(ui.values[1]);
+                    }
+                });
+                $("#minC17").val($("#slider-rangeC17").slider("values", 0));
+                $("#maxC17").val($("#slider-rangeC17").slider("values", 1));
+                // C18
+                $("#slider-rangeC18").slider({
+                    range: true,
+                    orientation: "horizontal",
+                    min: 0,
+                    max: 100,
+                    values: [0, 100],
+                    step: 10,
+                    slide: function (event, ui) {
+                    if (ui.values[0] == ui.values[1]) {
+                        return false;
+                    }
+                    $("#minC18").val(ui.values[0]);
+                    $("#maxC18").val(ui.values[1]);
+                    }
+                });
+                $("#minC18").val($("#slider-rangeC18").slider("values", 0));
+                $("#maxC18").val($("#slider-rangeC18").slider("values", 1));
             });
 
 
